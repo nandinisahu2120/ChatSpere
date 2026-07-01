@@ -23,9 +23,11 @@ export const register = async (req, res) => {
 
     // avtar api - https://api.dicebear.com/10.x/miniavs/svg?seed=Milo
     //profile photo
-    const maleProfilePhoto = `https://api.dicebear.com/10.x/miniavs/svg?seed=${username}`;
-    const femaleProfilePhoto = `https://api.dicebear.com/10.x/micah/svg?seed=Felix?`;
+    // const maleProfilePhoto = `https://api.dicebear.com/10.x/miniavs/svg?seed=${username}`;
+    // const femaleProfilePhoto = `https://api.dicebear.com/10.x/micah/svg?seed=Felix?`;
 
+    const maleProfilePhoto = `https://api.dicebear.com/10.x/miniavs/svg?seed=${username}`;
+    const femaleProfilePhoto = `https://api.dicebear.com/10.x/micah/svg?seed=${username}`;
     await User.create({
       fullName,
       username,
