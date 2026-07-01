@@ -33,8 +33,13 @@ const Signup = () => {
         toast.success(res.data.message);
       }
     } catch (error) {
-      toast.error(error.response.data.message);
-      console.log(error);
+      // toast.error(error.response.data.message);
+      // console.log(error);
+      if (error.response) {
+        toast.error(error.response.data.message);
+      } else {
+        toast.error("Server not responding. Please try again.");
+      }
     }
 
     setUser({
